@@ -8,6 +8,3 @@ supabase: Client = create_client(
     SUPABASE_URL,
     SUPABASE_KEY
 )
-
-print("SUPABASE_URL:", SUPABASE_URL)
-print("SUPABASE_KEY:", "OK" if SUPABASE_KEY else "MISSING")
