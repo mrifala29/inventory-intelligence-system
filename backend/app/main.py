@@ -1,6 +1,6 @@
 from fastapi import FastAPI
-from app.routers import products
+from app.modules.categories.router import router as category_router
 
 app = FastAPI(title="Inventory Intelligence API")
 
-app.include_router(products.router, prefix="/products", tags=["Products"])
+app.include_router(category_router)
