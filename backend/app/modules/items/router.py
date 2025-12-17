@@ -9,7 +9,10 @@ def create(data: ProductItemCreate):
     if not model_exists(str(data.model)):
         raise HTTPException(400, "Product model does not exist")
 
-    res = create_item(data.dict())
+    payload = data.dict()
+    payload["model"] = str(payload["model"])
+
+    res = create_item(payload)
     if res.error:
         raise HTTPException(400, res.error.message)
 
