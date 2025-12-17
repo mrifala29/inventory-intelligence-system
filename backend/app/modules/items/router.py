@@ -11,6 +11,7 @@ def create(data: ProductItemCreate):
 
     payload = data.dict()
     payload["model"] = str(payload["model"])
+    payload["sku"] = generate_sku(payload["model"])
 
     res = create_item(payload)
     if res.error:

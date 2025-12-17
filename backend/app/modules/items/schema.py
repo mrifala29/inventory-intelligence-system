@@ -5,7 +5,6 @@ from uuid import UUID
 class ProductItemCreate(BaseModel):
     model: UUID
     state: str
-    sku: str
     storage: int | None = None
     colour: str | None = None
     physical: str
