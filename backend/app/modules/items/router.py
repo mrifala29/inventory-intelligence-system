@@ -4,6 +4,7 @@ from .service import *
 
 router = APIRouter(prefix="/items", tags=["Product Items"])
 
+
 @router.post("/")
 def create(data: ProductItemCreate):
     if not model_exists(str(data.model)):
