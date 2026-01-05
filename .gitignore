@@ -41,3 +41,10 @@ Thumbs.db
 # Misc
 # ======================
 coverage/
+
+
+# ======================
+# Docs
+# ======================
+docs/Inventory Intelligence System Detail.docx
+docs/Inventory Intelligence System Detail.pdf
